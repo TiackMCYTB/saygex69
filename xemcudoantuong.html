@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="loggedIn.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/39fa9e302b.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <title>Xem cu đoán tướng - Say Gex 69</title>
+</head>
+
+<body>
+  <div class="sidebar bg-dark text-white d-md-none" id="sidebar">
+    <div class="container">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./index.html">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./signin.html" id="signin-btn-mobile">Đăng Nhập</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./signup.html" id="signup-btn-mobile">Đăng Ký</a>
+        </li>
+        <li class="nav-item"></li>
+        <a class="nav-link text-white" href="./xemcudoantuong.html">Dịch vụ xem cu đoán bắn được bao nhiêu lít sữa</a>
+        </li>
+        <li class="nav-item"></li>
+        <a class="nav-link text-white" href="./muavip.html">Các gói trả tiền</a>
+        </li>
+        <li class="nav-item"></li>
+        <a class="nav-link text-white" id="logout-mobile" style="display: none;" onclick="logout()">Đăng xuất</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="sidebar-icon" class="d-lg-none">
+    <i class="fa-solid fa-bars fa-2xl text-secondary" aria-hidden="true" onclick="toggleSidebar()"></i>
+  </div>
+
+  <div id="header" class="d-none d-lg-block">
+    <div class="p-5 bg-dark text-white text-center position-relative">
+
+      <div class="position-absolute start-0 translate-middle" style="padding-left: 300px;">
+        <a href="./index.html" id="logo-text" class="link-secondary">SayGex69🏳️‍🌈</a>
+      </div>
+      <div class="position-absolute start-0 translate-middle" style="padding-left: 800px;">
+        <a href="./xemcudoantuong.html">Dịch vụ xem cu đoán bắn được bao nhiêu lít sữa</a>
+      </div>
+
+      <div id="signup-signin" class="position-absolute end-0 translate-middle" style="padding-right: 30px;">
+        <button type="button" id="signin-btn" class="btn btn-primary btn-gradient m-2"
+          onclick="window.location.href='./signin.html'">Đăng Nhập</button>
+        <button type="button" id="signup-btn" class="btn btn-primary btn-gradient me-1"
+          onclick="window.location.href='./signup.html'">Đăng Ký</button>
+        <button type="button" class="btn btn-gradient-yellow" onclick="window.location.href='./muavip.html'">Mua
+          Vip</button>
+        <button type="button" id="logout" class="btn btn-primary btn-gradient" style="display: none;"
+          onclick="logout()">Đăng Xuất
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center text-danger">
+    <h3>Chiều dài dương vật khi “mềm”: Khoảng 8.8 – 9.16 cm. Chiều dài dương vật khi cương cứng: Khoảng 12.9 – 14.2 cm.
+      Chu vi dương vật khi “mềm”: Trung bình khoảng 9 – 10 cm. Chu vi dương vật khi cương cứng: Trung bình khoảng 11 –
+      12 cm.
+      Tinh hoàn bình thường ở nam giới Việt có bán kính trung bình là 4 – 5,1 cm;
+    </h3>
+  </div>
+
+  <div id="content" class="container d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+
+    <form style="margin-top: 100px; width: 50%;">
+      <div class="mb-3">
+        <label for="input-dick-w" class="form-label">Chiều dài dương vật (khi nứng, cm)</label>
+        <input type="number" class="form-control input-sm" id="input-dick-w" aria-describedby="w-dick-Help"
+          style="width: 100%;" required>
+        <div id="w-dick-help" class="form-text">Bảo mật - An toàn - Nhanh chóng</div>
+      </div>
+      <div class="mb-3">
+        <label for="input-dick-h" class="form-label">Chiều rộng/chu vi dương vật (khi nứng, cm)</label>
+        <input type="number" class="form-control input-sm" id="input-dick-h" style="width: 100%;" required>
+      </div>
+      <div class="mb-3" style="margin-top: 25px;">
+        <label for="input-dick-r1" class="form-label">Đường kính hòn dái thứ 1 (bên trái, cm)</label>
+        <input type="number" class="form-control" id="input-dick-r1" style="width: 100%;" required>
+      </div>
+      <div class="mb-3" style="margin-top: 25px;">
+        <label for="input-dick-r2" class="form-label">Đường kính hòn dái thứ 2 (bên phải, cm)</label>
+        <input type="number" class="form-control" id="input-dick-r2" style="width: 100%;" required>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-gradient w-100" onclick="xem_cu_doan_tuong()">xem cu bắn được bao nhiêu lít sữa</button>
+    </form>
+
+  </div>
+
+  <div id="result" class="text-center" style="margin-top: 120px; display: none;">
+    <h3>Dự đoán bạn bắn đuọc bao nhiêu lít sữa của quý khách là:</h3>
+    <h2 id="he-so-duong-vat" style="margin-bottom: 25px;"></h2>
+    <h1 class="text-danger" style="margin-bottom: 25px;">Vận hạn của bạn</h1>
+    <div id="van-han" class="container">
+
+    </div>
+  </div>
+
+  <footer id="footer" class="bg-dark text-white text-center text-lg-start" style="margin-top: 103px;">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Column 1: About -->
+        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sứ mệnh của chúng tôi</h5>
+          <p>
+            Chúng tôi tự hào là dịch vụ các ông bố đơn thân số 1 Việt Nam với tỉ lệ sex gay lên đến 99% các bạn bị thông
+            đít. Cùng các tư thế sex gay kích thích như BDSM, sục cặc chéo,... Vân vân. Cùng
+            các dịch vụ làm sạch khác như liếm lỗ đít, liếm dái và nuốt lưỡi. Còn chần chờ gì nữa mà không book ngay một
+            ông bố đơn thân trên saygex69 online!
+          </p>
+        </div>
+
+        <!-- Column 2: Social Media -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+          <h5 class="text-uppercase">Theo dõi chúng tôi</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="text-white">Facebook</a></li>
+            <li><a href="#!" class="text-white">Twitter</a></li>
+            <li><a href="#!" class="text-white">Instagram</a></li>
+            <li><a href="#!" class="text-white">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3 bg-secondary">
+          © 2024 Công Ty Trách Nhiệm Hữu Hạn Trần Duy Minh, Tổng Thống Dương Văn Minh & Đô Đốc Lê Đức Huy.
+        </div>
+        <div class="text-center p-3 bg-secondary">
+          © 2024 Duy Minh, President Duong Van Minh & Admiral Le Duc Huy LLC.
+        </div>
+  </footer>
+
+  <script src="./xemcudoantuong.js"></script>
+  <script>
+    const toggleSidebar = () => {
+      var sidebar = document.getElementById('sidebar');
+      if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+        sidebar.style.display = 'block';
+      } else {
+        sidebar.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>

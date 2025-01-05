@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/39fa9e302b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <title>SayGex69🏳️‍🌈 </title>
+</head>
+
+<body>
+
+    <div class="sidebar bg-dark text-white d-md-none" id="sidebar">
+        <div class="container">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./signin.html" id="signin-btn-mobile">Đăng Nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./signup.html" id="signup-btn-mobile">Đăng Ký</a>
+                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link text-white" href="./xemcudoantuong.html">Dịch vụ xem cu đoán bắn được bao nhiêu lít sữa</a>
+                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link text-white" href="./muavip.html">Các gói trả tiền</a>
+                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link text-white" id="logout-mobile" style="display: none;" onclick="logout()">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="sidebar-icon" class="d-lg-none">
+        <i class="fa-solid fa-bars fa-2xl text-secondary" aria-hidden="true" onclick="toggleSidebar()"></i>
+    </div>
+
+    <div id="header" class="d-none d-lg-block">
+        <div class="p-5 bg-dark text-white text-center position-relative">
+
+            <div class="position-absolute start-0 translate-middle" style="padding-left: 300px;">
+                <a href="./index.html" id="logo-text" class="link-secondary">SayGex69🏳️‍🌈ᅠ</a>
+            </div>
+            <div class="position-absolute start-0 translate-middle" style="padding-left: 800px;">
+                <a href="./xemcudoantuong.html">Dịch vụ xem cu đoán bắn được bao nhiêu lít sữa</a>
+            </div>
+
+            <div id="signup-signin" class="position-absolute end-0 translate-middle" style="padding-right: 30px;">
+                <button type="button" id="signin-btn" class="btn btn-primary btn-gradient m-2"
+                    onclick="window.location.href='./signin.html'">Đăng Nhập</button>
+                <button type="button" id="signup-btn" class="btn btn-primary btn-gradient me-1"
+                    onclick="window.location.href='./signup.html'">Đăng Ký</button>
+                <button type="button" class="btn btn-gradient-yellow" onclick="window.location.href='./muavip.html'">Mua
+                    Vip</button>
+                <button type="button" id="logout" class="btn btn-primary btn-gradient" style="display: none;" onclick="logout()">Đăng Xuất       
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="text-center text-uppercase text-danger bg-light mb-0">SayGex69🏳️‍🌈 xin chào quý khách!</h1>
+    <h5 class="text-center mb-4 mt-3" style="cursor: pointer; text-decoration: underline; color: #0D6EFD;" onclick="window.location.href='https://forms.gle/UT7Edgm65qZ7k8Cp8'">Đăng ký làm một ông bố trên saygex69?</h5>
+
+    <div id="content" class="container">
+        <!-- MODAL BELOW -->
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thuê Thành Công!</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h5>Bạn Đã Thuê Thành Công Ông Bố Này, Vui Lòng CHờ Đợi 5-10p Để Chúng Tôi Ship Ông Bố Này Về Chỗ Bạn!</h5>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-gradient" data-bs-dismiss="modal">Bỏ
+                            qua</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-danger" id="welcomeModalLabel">Vui Lòng Đọc!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            Website chỉ mang tính chất giải trí.
+                            Chúng tôi tự hào là dịch vụ trai bao số 1 hàng đầu châu phi. 
+                            Với tỉ lệ bị bung trung dai là 100%, hoặc sẽ bị bu long dich. 
+                            Xin chân thành cảm ơn.
+                            hãy sử dụng ứng dụng của chúng tôi để có được những ông bố đơn thân sẵn sàng phục vụ nhu cầu tinh duc cho mọi người.
+                        </h4>
+                        <hr>
+                        iwatchMLP1212 / Nguyen Hai Bach
+                        <br><br>
+                        <div class="text-center">
+                            <a href="https://github.com/TiackMCYTB/saygex69">Mã nguồn & giấy phép
+                                (Github)</a>
+                            <br><br>
+                            <a href="https://www.youtube.com/@Saygex69vietnam" class="link-secondary">©
+                                2024 Công Ty Trách Nhiệm Hữu Hạn SayGex69🏳️‍🌈<br>
+                                Giấy phép MIT / MIT License</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-gradient" data-bs-dismiss="modal">Bỏ
+                            qua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODEL ABOVE -->
+
+        <div class="card" id="cac-ong-bo-don-than"><div class="row bo-don-than">
+            <div class="col-md-3 border-sm">
+                <img src="./images/bo_don_than/bo_don_than1.jpg" alt="Image of Ông bố đơn thân 36 (Kim Duy Cương)" class="rounded-start bo-don-than-img">
+            </div>
+            <div class="col-lg">
+                <div class="card-body">
+                    <h3 class="card-title">Ông bố đơn thân 18cm (Hiep Yủ Ri 🐧)</h3>
+                    <p class="card-text">Tuổi: 12<br>Ông bố đơn thân đít bự, có thể làm những việc như bú cặc chéo, cắn đầu ti, liếm hai hòn dái, đá cháo lưỡi, liếm đít, nhai lông cặc, siêu ưu đãi chỉ 500k/giờ.</p>
+                    <button type="button" class="btn btn-secondary btn-gradient" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Book ngay
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div><div class="row bo-don-than">
+            <div class="col-md-3 border-sm">
+                <img src="./images/bo_don_than/bo_don_than2.jpg" alt="Image of Ông bố đơn thân 35 (Nguyễn Minh Nhật)" class="rounded-start bo-don-than-img">
+            </div>
+            <div class="col-lg">
+                <div class="card-body">
+                    <h3 class="card-title">Ông bố đơn thân 35cm (Đít Đi)</h3>
+                    <p class="card-text">Tuổi: 17<br>Dịch vụ trai bao tại trường với mức giá chỉ 49k/giờ mỗi người.</p>
+                    <button type="button" class="btn btn-secondary btn-gradient" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Book ngay
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div><div class="row bo-don-than">
+            <div class="col-md-3 border-sm">
+                <img src="./images/bo_don_than/bo_don_than3.jpg" alt="Image of Ông bố đơn thân 34 (Luong Nguyen Quoc Dat)" class="rounded-start bo-don-than-img">
+            </div>
+            <div class="col-lg">
+                <div class="card-body">
+                    <h3 class="card-title">Ông bố đơn thân 21cm (Anh An Bá Tử Khang )</h3>
+                    <p class="card-text">Tuổi: 16<br>Tôi là 1 người bố đơn thân từng có 1 người vợ già và có con, bà ấy đã bỏ tôi và để lại 1 đống tài sản. Giá siêu ưu đãi chỉ 499k/giờ.</p>
+                    <button type="button" class="btn btn-secondary btn-gradient" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Book ngay
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div><div class="row bo-don-than">
+            <div class="col-md-3 border-sm">
+                <img src="./images/bo_don_than/bo_don_than4.jpg" alt="Image of Ông bố đơn thân 33 (Bảo)" class="rounded-start bo-don-than-img">
+            </div>
+            <div class="col-lg">
+                <div class="card-body">
+                    <h3 class="card-title">Ông bố đơn thân 33cm (Lộc 🐧)</h3>
+                    <p class="card-text">Tuổi: 20<br>Ông bố siêu đơn thân siêu dâm siêu đen này sẵn sàng phục vụ bạn với mức giá siêu ưu đãi chỉ 500k/giờ.</p>
+                    <button type="button" class="btn btn-secondary btn-gradient" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Book ngay
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div><div class="row bo-don-than">
+            <div class="col-md-3 border-sm">
+                <img src="./images/bo_don_than/bo_don_than5.jpg" alt="Image of Ông bố đơn thân 32 (Hùng)" class="rounded-start bo-don-than-img">
+            </div>
+            <div class="col-lg">
+                <div class="card-body">
+                    <h3 class="card-title">Ông bố đơn thân 32cm (Ng Qnw)</h3>
+                    <p class="card-text">Tuổi: 18<br>Khi thuê tôi , bạn sẽ có trải nghiệm vô cùng sung sướng như bú cặc , liếm hai hòn bi , địt banh lỗ đít , ... Và có giá chỉ 698k/1 giờ.</p>
+                    <button type="button" class="btn btn-secondary btn-gradient" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Book ngay
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div><hr class="my-4"></div>
+        <nav aria-label="Page navigation" class="mt-3">
+            <ul class="pagination"><li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous" onclick="changePage(0)"><span aria-hidden="true">«</span></a></li><li class="page-item active"><a class="page-link" href="#" onclick="changePage(1)">1</a></li><li class="page-item "><a class="page-link" href="#" onclick="changePage(2)">2</a></li><li class="page-item disabled"><a class="page-link" href="#">...</a></li><li class="page-item "><a class="page-link" href="#" onclick="changePage(8)">8</a></li><li class="page-item "><a class="page-link" href="#" aria-label="Next" onclick="changePage(2)"><span aria-hidden="true">»</span></a></li></ul>
+        </nav>
+    </div>
+
+    <footer id="footer" class="bg-dark text-white text-center text-lg-start" style="display: block; margin-top: 100px;">
+        <div class="container p-4">
+            <div class="row">
+                <!-- Column 1: About -->
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sứ mệnh của chúng tôi</h5>
+                    <p>
+                        Chúng tôi tự hào là dịch vụ các ông bố đơn thân số 1 Việt Nam với tỉ lệ sex gay lên đến 99% các
+                        bạn bị thông đít. Cùng các tư thế sex gay kích thích như BDSM, sục cặc chéo,... Vân vân. Cùng
+                        các dịch vụ làm sạch khác như liếm lỗ đít, liếm dái và nuốt lưỡi. Còn chần chờ gì nữa mà không
+                        book ngay một ông bố đơn thân trên saygex69 online!
+                    </p>
+                </div>
+
+                <!-- Column 2: Social Media -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+                    <h5 class="text-uppercase">Theo dõi chúng tôi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.youtube.com/@Saysgex69" class="text-white">Youtube</a></li>
+                        <li><a href="https://www.youtube.com/@Saysgex69" class="text-white">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/@Saysgex69" class="text-white">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/@Saysgex69" class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center p-3 bg-secondary">
+                    © 2024 Công Ty Trách Nhiệm Hữu Hạn Trần Duy Minh, Tổng Thống Dương Văn Minh &amp; Đô Đốc Lê Đức Huy.
+                </div>
+                <div class="text-center p-3 bg-secondary">
+                    © 2024 Duy Minh, President Duong Van Minh &amp; Admiral Le Duc Huy LLC.
+                </div>
+    </div></div></footer>
+    <script src="loggedIn.js"></script>
+    <script src="main.js"></script>
+    <script src="firebase.js" type="module"></script>
+</body>
+
+</html>
